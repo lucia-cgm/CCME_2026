@@ -8,7 +8,7 @@
         <title>CCME 2026</title>
 
         <!-- FAVICON -->
-        <link href="MEDIA/img/Favicon.webp" rel="icon" type="image/png">
+        <link href="MEDIA/img/favicon.webp" rel="icon" type="image/png">
 
         <!-- CSS Y JS -->
         <link href="CSS/styles.css" rel="stylesheet" type="text/css">
@@ -18,7 +18,6 @@
         <!-- FONTS -->
         <!-- LOOS - ADOBE -->
         <link rel="stylesheet" href="https://use.typekit.net/xrj6xxm.css">
-
         <!-- MONTSERRAT Y BIRTHSTONE - GOOGLE FONTS -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,14 +32,19 @@
         <script src="https://kit.fontawesome.com/c3fd22b8e3.js" crossorigin="anonymous"></script>
     </head>
 
+
+
     <body>
         <!-- MENU AMBURGUESA -->
         <div class="menu-icon" onclick="openMenu()">
-            <i class="fa-solid fa-bars"></i>
+            <i class="fa-light fa-bars"></i>
         </div>
 
         <!-- MENU -->
         <nav id="menu">
+            <a href="index.html">
+                <img src="MEDIA/img/logo.svg" alt="CCME2026">
+            </a>
             <ul>
                 <li>
                     <a href="#experiencia" onclick="closeMenu()">Experiencia</a>
@@ -51,13 +55,13 @@
                 <li>
                     <a href="#recinto" onclick="closeMenu()">Recinto</a>
                 </li>
-                 <li>
+                <li>
                     <a href="entradas.html" onclick="closeMenu()">Abonos & Entradas</a>
                 </li>
 
                 <!-- ICONO "CLOSE" -->
                 <li>
-                    <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+                    <i class="fa-light fa-xmark" onclick="closeMenu()"></i>
                 </li>
             </ul>
         </nav>
@@ -71,10 +75,141 @@
         </header>
 
 
+        <!-- SECCION CARTEL -->
         <section id="cartel">
+            <div>
+                <h5>VIERNES 11</h5>
+                <h2>J BALVIN</h2>
+                <h3>VIVA SUECIA · TRUENO</h3>
+                <h4>JC REYES · MICRO TDH · YAMI SARDIE · ALVAMA ICE</h4>
+                <h4>LA CENDEJAS · BLAS Cantó · DANIELA BLASCO · MAFALDA CARDENAL</h4>
+            </div>
+            <div>
+                <h5>VIERNES 12</h5>
+                <h2>LOLA ÍNDIGO</h2>
+                <h3>MARIA BECERRA · TIAGO PZK · CAROLINA DURANTE</h3>
+                <h4>ÁLVARO DE LUNA · LEIRE MARTÍNEZ · L-GANTE</h4>
+                <h4>MARC SEGUÍ · LUCÍA DE LA PUERTA · MAYO · PERRO NEGRO</h4>
+            </div>
+        </section>
+
+
+        <!-- SECCION EXPERIENCIAS -->
+        <section id="experiencias">
+            <h1>Todas las experiencias dentro de CCME que te llevarán a otro nivel</h1>
+
+            <!-- TO DO - icono flechas -->
+
+            <div>
+                <figure>
+                    <img src="MEDIA/img/experiencias/pulseras_abono_cashless.webp" alt="Pulseras cashless">
+                    <figcaption>CASHLESS</figcaption>
+                </figure>
+                <figure>
+                    <img src="MEDIA/img/experiencias/coches_choque.webp" alt="Coches de choque">
+                    <figcaption>COCHES DE CHOQUE</figcaption>
+                </figure>
+                <figure>
+                    <img src="MEDIA/img/experiencias/noria.webp" alt="Noria">
+                    <figcaption>NORIA</figcaption>
+                </figure>
+                <figure>
+                    <img src="MEDIA/img/experiencias/tatoos.webp" alt="Tatoos">
+                    <figcaption>TATOOS</figcaption>
+                </figure>
+                <figure>
+                    <img src="MEDIA/img/experiencias/make_up.webp" alt="Make-up_peluquería">
+                    <figcaption>MAKE-UP & PELUQUERÍA</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        
+        <!-- CANAL DE YOUTUBE -->
+        <section id="canal_yt">
+            <h1>TU CANAL DE CCME EN YOUTUBE</h1>
+            <p>En Coca-Cola Music Experience descubrirás contenido exclusivo de tus artistas favoritos. ¡Entérate de todas las novedades con #CocaColaMusicExperience!</p>
+        </section>
+
+        
+        <!-- PRESENTADORES -->
+        <section id="presentadores">
+            <div>
+                <h1>PRESENTADORES</h1>
+                <p>CCME cuenta con los mejores presentadores nacionales, así como creadores de contenidos.</p>
+            </div>
+
+            <figure>
+                <img src="MEDIA/img/presentadores/toni_aguilar.jpg" alt="Toni Aguilar">
+                <figcaption>TONI AGUILAR</figcaption>
+                <p>Será el maestro de ceremonias oficial desde el escenario, celebrando los quince años de CCME.</p>
+            </figure>
+
+            <div class="ines">
+                <div>
+                    <h4>INÉS HERNAN</h4>
+                    <p>Será la voz que acerque a tus artistas favoritos: entrevistas exclusivas que solo vivirás aquí.</p>
+                </div>
+                <img src="MEDIA/img/presentadores/ines.webp" alt="Ines Hernan">
+            </div>
+
+            <div class="david">
+                <div>
+                    <h4>DAVID MORENO</h4>
+                    <p>Llevará la energía del público al máximo, conectando contigo en cada rincón del festival.</p>
+                </div>
+                <img src="MEDIA/img/presentadores/david_moreno.webp" alt="David Moreno">
+            </div>
+        </section>
+
+        <!-- MAPA -->
+        <section id="recinto">
+            <h1>DISFRUTA DE CCME 2026 EN EL IBERDROLA MUSIC</h1>
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Calle Laguna Dalga, Villaverde, 28021 Madrid</h3>
+            </div>
+
+            <!-- TO DO - INSERTAR MAPA -->
+            
+
+            <img src="MEDIA/img/mapa_recinto.webp" alt="Mapa del recinto">
 
         </section>
 
+        <!-- PATROCINADORES -->
+
+        <!-- FOOTER -->
+        <footer>
+            <img src="MEDIA/img/patrocinadores/cocacola_logo.webp">
+            <p>&copy; 2025 The Coca-Cola Company</p>
+            <div class="icons">
+                <a href="https://www.youtube.com/@cocacolamusicexperience">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://www.facebook.com/CocaColaEsp/">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/cocacola_esp/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://x.com/CocaCola_es">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </div>
+            <div>
+                <p>Preguntas frecuentes</p>
+                <p>Mapa del sitio</p>
+                <p>Contacte con nosotros</p>
+                <p>Condiciones de uso</p>
+                <p>Política de privacidad</p>
+                <p>Política de cookies</p>
+            </div>
+
+            <!-- TO DO - TE HABAR UNA PG NUEVA -->
+            <a href="https://www.coca-cola.com/es/es/legal/politica-de-cookies">Configuración de cookies</a>
+
+        </footer>
 
 
     </body>
