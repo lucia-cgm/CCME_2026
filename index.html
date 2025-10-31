@@ -35,43 +35,66 @@
 
 
     <body>
-        <!-- MENU AMBURGUESA -->
-        <div class="menu-icon" onclick="openMenu()">
-            <i class="fa-light fa-bars"></i>
-        </div>
-
-        <!-- MENU -->
-        <nav id="menu">
-            <a href="index.html">
-                <img src="MEDIA/img/logo.svg" alt="CCME2026">
-            </a>
-            <ul>
-                <li>
-                    <a href="#experiencia" onclick="closeMenu()">Experiencia</a>
-                </li>
-                <li>
-                    <a href="#cartel" onclick="closeMenu()">Cartel</a>
-                </li>
-                <li>
-                    <a href="#recinto" onclick="closeMenu()">Recinto</a>
-                </li>
-                <li>
-                    <a href="entradas.html" onclick="closeMenu()">Abonos & Entradas</a>
-                </li>
-
-                <!-- ICONO "CLOSE" -->
-                <li>
-                    <i class="fa-light fa-xmark" onclick="closeMenu()"></i>
-                </li>
-            </ul>
-        </nav>
-
-
         <header>
-            <h1>11 Y 12 SEPT.</h1>
-            <h2>¡NO TE PIERDAS LA EXPERIENCIA!</h2>
-            <h2>VEN A CELEBRAR NUESTRO <span>15 aniversario</span></h2>
+            <div>
+                <!-- MENU AMBURGUESA -->
+                <div class="menu-icon" onclick="openMenu()">
+                    <i class="fa-light fa-bars"></i>
+                </div>
+        
+                <!-- MENU -->
+                <nav id="menu">
+                    <a href="index.html">
+                        <img src="MEDIA/img/logo.svg" alt="CCME2026">
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="#experiencia">Experiencia</a>
+                        </li>
+                        <li>
+                            <a href="#cartel">Cartel</a>
+                        </li>
+                        <li>
+                            <a href="#recinto">Recinto</a>
+                        </li>
+                        <li>
+                            <a href="entradas.html">Abonos & Entradas</a>
+                        </li>
+        
+                        <!-- ICONO "CLOSE" -->
+                        <li>
+                            <i class="fa-light fa-xmark" onclick="closeMenu()"></i>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
 
+            <div class="content">
+                <h1>11 Y 12 SEPT.</h1>
+                <h2>¡NO TE PIERDAS LA EXPERIENCIA!</h2>
+                
+                <div class="contador">
+                    <div class="box">
+                        <span id="dias">0</span>
+                        <h4>DÍAS</h4>
+                    </div>
+                    <div class="box">
+                        <span id="horas">0</span>
+                        <h4>HORAS</h4>
+                    </div>
+                    <div class="box">
+                        <span id="minutos">0</span>
+                        <h4>MIN</h4>
+                    </div>
+                </div>
+                
+                <h2>VEN A CELEBRAR NUESTRO</h2>
+                <h2><span>15 aniversario</span></h2>
+            </div>
+            
+            <div class="video-bg">
+                <iframe width="928" height="522" src="https://www.youtube.com/embed/BDrKDOL0brM" title="ASÍ VIVIMOS CCME 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
         </header>
 
 
@@ -184,16 +207,16 @@
             <img src="MEDIA/img/patrocinadores/cocacola_logo.webp">
             <p>&copy; 2025 The Coca-Cola Company</p>
             <div class="icons">
-                <a href="https://www.youtube.com/@cocacolamusicexperience">
+                <a href="https://www.youtube.com/@cocacolamusicexperience" title="youtube" target="_blank">
                     <i class="fa-brands fa-youtube"></i>
                 </a>
-                <a href="https://www.facebook.com/CocaColaEsp/">
+                <a href="https://www.facebook.com/CocaColaEsp/" title="facebook" target="_blank">
                     <i class="fa-brands fa-facebook-f"></i>
                 </a>
-                <a href="https://www.instagram.com/cocacola_esp/">
+                <a href="https://www.instagram.com/cocacola_esp/" title="instagram" target="_blank">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
-                <a href="https://x.com/CocaCola_es">
+                <a href="https://x.com/CocaCola_es" title="x-twitter" target="_blank">
                     <i class="fa-brands fa-x-twitter"></i>
                 </a>
             </div>
@@ -207,7 +230,7 @@
             </div>
 
             <!-- TO DO - TE HABAR UNA PG NUEVA -->
-            <a href="https://www.coca-cola.com/es/es/legal/politica-de-cookies">Configuración de cookies</a>
+            <a href="https://www.coca-cola.com/es/es/legal/politica-de-cookies" title="cookies" target="_blank">Configuración de cookies</a>
 
         </footer>
 
