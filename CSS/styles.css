@@ -47,39 +47,37 @@ h4 {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     font-weight: 800;
     color: var(--black-color);
-    -webkit-text-stroke: 2.5px var(--white-color);
+    -webkit-text-stroke: 3px var(--white-color);
+    margin-top: 3rem;
 }
-/* left: calc(50% - 308px/2); */
 
 h2 {
     font-size: 1.6em;
     font-weight: 600;
 }
 
-
-
 /* h3 {
     font-size: 2rem;
     font-weight: 600;
-}
-
-p {
-    margin: var(--margenes-texto);
-    line-height: var(--interlineado);
 } */
 
+p {
+    font-size: 1rem;
+    color: var(--white-color);
+} 
 
 
-/* MENU */
+
+
+/* HEADER */
 /* M.hamburguesa y x - OCULTOS */
 .menu-icon,
 #menu ul > :last-child {
     display: none;
 }
-
 
 #menu {
     width: 100vw;
@@ -97,7 +95,6 @@ p {
     width: 8rem;
     margin-bottom: 10px;
 }
-
 
 #menu > :last-child {
     display: flex;
@@ -120,8 +117,6 @@ p {
     color: var(--black-color);
 }
 
-
-
 .content {
     height: 100vh;
     text-align: center;
@@ -136,21 +131,32 @@ p {
 
 .content h2 span{
     font-family: "Birthstone", cursive;
-    font-weight: 400;
+    font-weight: 200;
     font-size: 2em;
     /* margin-top: -1rem; */
 }
 
-
-header {
-    height: 100vh;
-    /* background: url("../img/coffe_header_bg.jpg") repeat center center/cover; */
+/* CONTADOR */
+.contador {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    margin: 4rem 0;
 }
 
+.box span {
+    font-family: "loos-extrawide", sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    display: block;
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 5.2rem;
+    margin-bottom: 0.5rem;
+}
 
-/* Fondo con video */
+/* FONDO - VIDEO */
 .video-bg {
     position: fixed;
     top: 0;
@@ -159,37 +165,25 @@ header {
     height: 100%;
     overflow: hidden;
     z-index: -1;
-   background-color: var(--black-color, 0.5);
 }
 
 .video-bg iframe {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 177.77vh; /* Mantener proporción 16:9 */
-  height: 100vh;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
 }
 
 
-.contador {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  margin: 4rem 0;
-}
-
-.box {
-  background: white;
-  color: black;
-  border-radius: 15px;
-  padding: 20px;
-  width: 100px;
-}
-
-.box span {
-  font-size: 2rem;
-  font-weight: 900;
-  display: block;
+/* SECCION CARTEL */
+#cartel {
+    background-image: url('media/img/cartel_fondo.jpg');
+    background-size: cover;
+    background-position: center;  /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    width: 100vh;
+    height: 100vh;
 }
