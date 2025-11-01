@@ -49,7 +49,7 @@
                     </a>
                     <ul>
                         <li>
-                            <a href="#experiencia">Experiencia</a>
+                            <a href="#experiencias">Experiencias</a>
                         </li>
                         <li>
                             <a href="#cartel">Cartel</a>
@@ -100,19 +100,21 @@
 
         <!-- SECCION CARTEL -->
         <section id="cartel">
-            <div>
-                <h5>VIERNES 11</h5>
-                <h2>J BALVIN</h2>
-                <h3>VIVA SUECIA · TRUENO</h3>
-                <h4>JC REYES · MICRO TDH · YAMI SARDIE · ALVAMA ICE</h4>
-                <h4>LA CENDEJAS · BLAS Cantó · DANIELA BLASCO · MAFALDA CARDENAL</h4>
-            </div>
-            <div>
-                <h5>VIERNES 12</h5>
-                <h2>LOLA ÍNDIGO</h2>
-                <h3>MARIA BECERRA · TIAGO PZK · CAROLINA DURANTE</h3>
-                <h4>ÁLVARO DE LUNA · LEIRE MARTÍNEZ · L-GANTE</h4>
-                <h4>MARC SEGUÍ · LUCÍA DE LA PUERTA · MAYO · PERRO NEGRO</h4>
+            <div id="cartel-bg">
+                <div>
+                    <h5>VIERNES 11</h5>
+                    <h2>J BALVIN</h2>
+                    <h3>VIVA SUECIA · TRUENO</h3>
+                    <h4>JC REYES · MICRO TDH · YAMI SARDIE · ALVAMA ICE</h4>
+                    <h4>LA CENDEJAS · BLAS Cantó · DANIELA BLASCO · MAFALDA CARDENAL</h4>
+                </div>
+                <div>
+                    <h5>VIERNES 12</h5>
+                    <h2>LOLA ÍNDIGO</h2>
+                    <h3>MARIA BECERRA · TIAGO PZK · CAROLINA DURANTE</h3>
+                    <h4>ÁLVARO DE LUNA · LEIRE MARTÍNEZ · L-GANTE</h4>
+                    <h4>MARC SEGUÍ · LUCÍA DE LA PUERTA · MAYO · PERRO NEGRO</h4>
+                </div>
             </div>
         </section>
 
@@ -123,24 +125,72 @@
 
             <!-- TO DO - icono flechas -->
 
-            <div>
-                <figure>
+            <div class="carrusel">
+                <!-- FOTO 1 -->
+                <figure class="f1" onclick="abrirModal(this)">
                     <img src="MEDIA/img/experiencias/pulseras_abono_cashless.webp" alt="Pulseras cashless">
                     <figcaption>CASHLESS</figcaption>
                 </figure>
-                <figure>
+                <!-- Ventana modal - F1 -->
+                <div id="modal">
+                    <div class="m-content">
+                        <div class="m-img">
+                            <img src="MEDIA/img/experiencias/pulseras_abono_cashless.webp" alt="Pulseras cashless">
+                        </div>
+                        <div class="m-info">
+                            <h3>PULSERAS CASHLESS</h3>
+                            <ol>
+                                <li><span>Función NFC.</span> Recarga tu pulsera en efectivo o tarjeta en los puntos habilitados.</li>
+                                <li>¡Paga rápido donde quieras!</li>
+                                <li><span>Aproxima tu pulsera a la PDA</span> del vendedor y se descontará el importe recargado.</li>
+                                <li><span>Si te queda algo de dinero en la pulsera</span> tras el festival, podrás recuperarlo en la web sin coste de gestión.</li>
+                                <li><span>Es importante que guardes la pulsera</span> porque necesitarás el código para recuperar el dinero.</li>
+                            </ol>
+                            <p>NO TE OLVIDES DE RECUPERAR EL DINERO <span>ANTES DEL 15/10</span></p>
+                            <div class="buttons">
+                                <button href="#mapa" class="btn">Ver en el mapa  →</button>
+                                <button href="entradas.html" class="btn">Comprar entradas  →</button>
+                            </div>
+                        </div>
+                        <span id="cerrar-modal" onclick="cerrarModal()">&times;</span>
+                    </div>
+                </div>
+
+                <!-- FOTO 2 -->
+                <figure class="f2">
                     <img src="MEDIA/img/experiencias/coches_choque.webp" alt="Coches de choque">
+                    <!-- <span class="badge">02</span> -->
                     <figcaption>COCHES DE CHOQUE</figcaption>
                 </figure>
-                <figure>
+                <!-- Ventana modal - F2 -->
+                <div id="modal">
+                    <div class="m-content">
+                        <div class="m-img">
+                            <img src="MEDIA/img/experiencias/coches_choque.webp" alt="Coches de choque">
+                        </div>
+                        <div class="m-info">
+                            <h3>COCHES DE CHOQUE</h3>
+                            <p>Un clásico que nunca falla. Disfruta de la <span>adrenalina de los coches de choque</span> al ritmo de la mejor música.</p>
+                            <p>Los podrás encontrar en la <span>salida 6</span>, junto a los puestos de comida.</p>
+                            <div class="buttons">
+                                <button href="#mapa" class="btn">Ver en el mapa  →</button>
+                                <button href="entradas.html" class="btn">Comprar entradas  →</button>
+                            </div>
+                        </div>
+                        <span id="cerrar-modal" onclick="cerrarModal()">&times;</span>
+                    </div>
+                </div>
+
+
+                <figure class="f3">
                     <img src="MEDIA/img/experiencias/noria.webp" alt="Noria">
                     <figcaption>NORIA</figcaption>
                 </figure>
-                <figure>
+                <figure class="f4">
                     <img src="MEDIA/img/experiencias/tatoos.webp" alt="Tatoos">
                     <figcaption>TATOOS</figcaption>
                 </figure>
-                <figure>
+                <figure class="f5">
                     <img src="MEDIA/img/experiencias/make_up.webp" alt="Make-up_peluquería">
                     <figcaption>MAKE-UP & PELUQUERÍA</figcaption>
                 </figure>
@@ -150,38 +200,45 @@
         
         <!-- CANAL DE YOUTUBE -->
         <section id="canal_yt">
-            <h1>TU CANAL DE CCME EN YOUTUBE</h1>
-            <p>En Coca-Cola Music Experience descubrirás contenido exclusivo de tus artistas favoritos. ¡Entérate de todas las novedades con #CocaColaMusicExperience!</p>
+            <div>
+                <h1>TU CANAL DE CCME EN YOUTUBE</h1>
+                <p>En Coca-Cola Music Experience descubrirás contenido exclusivo de tus artistas favoritos. ¡Entérate de todas las novedades con #CocaColaMusicExperience!</p>
+                <a>
+                    <i class="fa-light fa-circle-play"></i>
+                </a>
+            </div>
         </section>
 
         
         <!-- PRESENTADORES -->
         <section id="presentadores">
             <div>
-                <h1>PRESENTADORES</h1>
+                <h2>PRESENTADORES</h2>
                 <p>CCME cuenta con los mejores presentadores nacionales, así como creadores de contenidos.</p>
             </div>
-
-            <figure>
-                <img src="MEDIA/img/presentadores/toni_aguilar.jpg" alt="Toni Aguilar">
-                <figcaption>TONI AGUILAR</figcaption>
-                <p>Será el maestro de ceremonias oficial desde el escenario, celebrando los quince años de CCME.</p>
-            </figure>
-
-            <div class="ines">
+            <div class="info-presentadores">
+                <figure>
+                    <img src="MEDIA/img/presentadores/toni_aguilar.webp" alt="Toni Aguilar">
+                    <figcaption>TONI AGUILAR</figcaption>
+                    <p>Será el maestro de ceremonias oficial desde el escenario, celebrando los quince años de CCME.</p>
+                </figure>
                 <div>
-                    <h4>INÉS HERNAN</h4>
-                    <p>Será la voz que acerque a tus artistas favoritos: entrevistas exclusivas que solo vivirás aquí.</p>
+                    <div class="ines">
+                        <div>
+                            <h4>INÉS HERNAN</h4>
+                            <p>Será la voz que acerque a tus artistas favoritos: entrevistas exclusivas que solo vivirás aquí.</p>
+                        </div>
+                        <img src="MEDIA/img/presentadores/ines.webp" alt="Ines Hernan">
+                    </div>
+        
+                    <div class="david">
+                        <div>
+                            <h4>DAVID MORENO</h4>
+                            <p>Llevará la energía del público al máximo, conectando contigo en cada rincón del festival.</p>
+                        </div>
+                        <img src="MEDIA/img/presentadores/david_moreno.webp" alt="David Moreno">
+                    </div>
                 </div>
-                <img src="MEDIA/img/presentadores/ines.webp" alt="Ines Hernan">
-            </div>
-
-            <div class="david">
-                <div>
-                    <h4>DAVID MORENO</h4>
-                    <p>Llevará la energía del público al máximo, conectando contigo en cada rincón del festival.</p>
-                </div>
-                <img src="MEDIA/img/presentadores/david_moreno.webp" alt="David Moreno">
             </div>
         </section>
 

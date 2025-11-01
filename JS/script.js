@@ -15,3 +15,22 @@ function actualizarContador() {
 
 actualizarContador();
 setInterval(actualizarContador, 100)
+
+
+// VENTANA MODAL
+function cerrarModal() {
+  document.getElementById("modal").style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
+function abrirModal(figure) {
+  const modal = document.getElementById("modal");
+  const modalImg = modal.querySelector(".m-img img");
+            
+  modalImg.src = figure.querySelector("img").src;
+            
+  // Mostrar ventana modal
+  modal.style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+
