@@ -1,3 +1,36 @@
+// MENU
+// Abre el menu
+function openMenu() {
+  console.log("Función openMenu");
+  document.getElementById("menu").firstElementChild.lastElementChild.style.left ="0";
+}
+// CERRAR menu
+function closeMenu() {
+  console.log("Función closeMenu");
+  document.getElementById("menu").firstElementChild.lastElementChild.style.left ="-100%";
+}
+
+
+
+// VENTANA MODAL
+function cerrarModal() {
+  document.getElementById("modal").style.display = "none";
+  document.body.style.overflow = "auto";
+}
+
+function abrirModal(figure) {
+  const modal = document.getElementById("modal");
+  const modalImg = modal.querySelector(".m-img img");
+  
+  modalImg.src = figure.querySelector("img").src;
+  
+  // Mostrar ventana modal
+  modal.style.display = "flex";
+  document.body.style.overflow = "hidden";
+}
+
+
+
 // CONTADOR
 function actualizarContador() {
   const fechaObjetivo = new Date("2026-09-11T12:00:00");
@@ -15,22 +48,3 @@ function actualizarContador() {
 
 actualizarContador();
 setInterval(actualizarContador, 100)
-
-
-// VENTANA MODAL
-function cerrarModal() {
-  document.getElementById("modal").style.display = "none";
-  document.body.style.overflow = "auto";
-}
-
-function abrirModal(figure) {
-  const modal = document.getElementById("modal");
-  const modalImg = modal.querySelector(".m-img img");
-            
-  modalImg.src = figure.querySelector("img").src;
-            
-  // Mostrar ventana modal
-  modal.style.display = "flex";
-  document.body.style.overflow = "hidden";
-}
-

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CCME 2026</title>
+
+        <!-- FAVICON -->
+        <link href="MEDIA/img/favicon.webp" rel="icon" type="image/png">
+
+        <!-- CSS Y JS -->
+        <link href="CSS/entradas.css" rel="stylesheet" type="text/css">
+        <script src="JS/script.js"></script>
+        
+
+        <!-- FONTS -->
+        <!-- LOOS - ADOBE -->
+        <link rel="stylesheet" href="https://use.typekit.net/xrj6xxm.css">
+        <!-- MONTSERRAT Y BIRTHSTONE - GOOGLE FONTS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Montserrat&display=swap" rel="stylesheet">
+
+        <!-- ICONOS FONT AWESOME -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </head>
+
+    <body>
+        <header>
+            <!-- MENU -->
+            <nav id="menu">
+                <!-- MENU AMBURGUESA -->
+                <div class="menu-icon menu-logo" onclick="openMenu()">
+                    <i class="fa-light fa-bars"></i>
+                </div>
+                    
+                <a href="index.html">
+                    <img src="MEDIA/img/logo.svg" alt="CCME2026">
+                </a>
+
+                <ul>
+                    <li>
+                        <a href="#experiencias" onclick="closeMenu()"><span class="linea">Experiencias</span></a>
+                    </li>
+                    <li>
+                        <a href="#cartel" onclick="closeMenu()"><span class="linea">Cartel</span></a>
+                    </li>
+                    <li>
+                        <a href="#recinto" onclick="closeMenu()"><span class="linea">Recinto</span></a>
+                    </li>
+                    <li>
+                        <a href="entradas.html" onclick="closeMenu()"><span class="entradas-btn">Abonos & Entradas</span></a>
+                    </li>     
+                </ul>
+
+                <!-- ICONO "CLOSE" -->
+                <div class="close-icon">
+                    <i class="fa-light fa-xmark" onclick="closeMenu()"></i>
+                </div>
+            </nav>
+
+            <div class="header-img ">
+                <div class="img-bg">
+                    <img src="MEDIA/img/entradas_y_abonos_fondo.webp" alt="entradas">
+                </div>
+                <div class="content">
+                    <h1>ABONOS & ENTRADAS</h1>
+                    <h2>Para poder asistir a nuestro festival de música y disfrutar de tus artistas favoritos, solo necesitas tu abono de fin de semana o la entrada de un día, tú eliges. Y para ayudarte con tu toma de decisión, te facilitamos aquí toda la información disponible.</h2>
+                </div>
+            </div>            
+        </header>
+
+        <!-- TIPO DE ENTRADAS -->
+        <section>
+            <div>
+                <img src="MEDIA/img/experiencias/pulseras_abono_cashless.webp" alt="Abobo dos días">
+                <h3>Abono 70€ días 11 y 12 de septiembre</h3>
+                <p>Para todos aquellos que quieran disfrutar de la experiencia completa de CCME, hazte con tu abono completo por 70€ para asistir ambos días.</p>
+            </div>
+            <div>
+                <img src="MEDIA/img/entrada_dia.webp" alt="Entrada un solo día">
+                <h3>Entrada única 38€ días 11 o 12 de septiembre</h3>
+                <p>Si no puedes venir los dos días pero no quieres perderte a tu artista favorito, puedes comprar una entrada de día único por 38€. Tú eliges: 11 o 12 de septiembre.</p>
+            </div>
+        </section>
+
+
+        <!-- CUESTIONARIO ENTRADAS -->
+         <section id="compra-entradas">
+            <h2>¡NO TE QUEDES SIN LA TUYA!</h2>
+            <form onsubmit="return comprar()">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" placeholder="Nombre" required>
+                <label for="nombre">Apellidos</label>
+                <input type="text" id="apellidos" placeholder="Apellidos" required>
+                <label for="correo">Correo electrónico</label>
+                <input type="email" id="correo" placeholder="E-mail" required>
+                <label for="actividad">Tipo de entrada</label>
+               <!-- DESPLEGABLE dentro de una opción -->
+                <select id="actividad" onchange="costeTotal()" required>
+                    <option value="a1">Abono días - 11 y 12 de septiembre</option>
+                    <option value="a2">Entrada única - días 11 o 12 de septiembre</option>
+                </select>
+                <label for="numero">Número de entradas</label>
+                <input type="number" id="numero" min="1" max="6" placeholder="Número de entradas" onchange="costeTotal()" required>
+                <p>Coste de las entradas: <span id="coste"></span></p>
+                <input type="submit" value="Comprar entradas">
+            </form>
+        </section>
+
+        <!-- CAMBIAR -->
+        <div id="modal-imagen">
+            <figure>
+                <img src="" alt="">
+                <figcaption></figcaption>
+            </figure>
+            <i class="fa-solid fa-xmark" onclick="cerrarModal()"></i>
+        </div>
+        <div id="modal-entradas">
+            <div>
+                <h2>La compra se ha realizado correctamente</h2>
+                <p>Actividad seleccionada:</p>
+                <ul>
+                    <!-- Se tienen que poner id distintos a los del formulario porque no se pueden repetir los id dentro del mismo HTML -->
+                    <li>Nombre: <strong id="n"></strong></li>
+                    <li>Correo electrónico: <strong id="c"></strong></li>
+                    <li>Actividad: <strong id="a"></strong></li>
+                    <li>Número de entradas: <strong id="nu"></strong></li>
+                    <li>Coste total: <strong id="ct"></strong></li>
+                </ul>
+                <button onclick="cerrarVentana()">Aceptar</button>
+            </div>
+        </div>
+
+    </body>
+
+</html>

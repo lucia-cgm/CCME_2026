@@ -1,0 +1,194 @@
+/* LOOS FONT */
+/* font-family: "loos-extrawide", sans-serif;
+Medium - font-weight: 500;
+Bold - font-weight: 700;
+Black - font-weight: 800; */
+
+/* MONTSERRAT */
+/* font-family: "Montserrat", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;*/
+
+/* BIRTHSTONE */
+/* font-family: "Birthstone", cursive;
+font-weight: 400;*/
+
+
+/* VARIABLES */
+:root {
+    --white-color: white;
+    --black-color: black;
+    --ccme-color: #F40009;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    background-image: url(../MEDIA/img/fondos/fondo.webp);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "loos-extrawide", sans-serif;
+    font-style: normal;
+    /* margin: var(--margenes-texto); */
+    color: var(--white-color);
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 800;
+    color: var(--black-color);
+    -webkit-text-stroke: 12px var(--white-color);
+    paint-order: stroke fill;
+    margin-top: 3rem;
+}
+
+h2 {
+    font-size: 1.6em;
+    font-weight: 800;
+}
+
+h3{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+h4 {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+h5 {
+    font-size: 1em;
+    font-weight: 800;
+    color: var(--black-color);
+    -webkit-text-stroke: 5px var(--white-color);
+    paint-order: stroke fill;
+}
+
+p {
+    font-size: 1rem;
+    color: var(--white-color);
+} 
+
+
+
+
+/* HEADER */
+/* M.hamburguesa y x - OCULTOS */
+.menu-icon,
+.close-icon{
+    display: none;
+}
+
+#menu {
+    width: 100vw;
+    height: 4rem;
+    top: 3rem;
+    display: flex;
+    align-items: center;
+    /* flex-direction: row; */
+    justify-content: space-around;
+    position: fixed;
+    z-index: 2;
+}
+
+#menu > a > img{
+    width: 8rem;
+    margin-bottom: 10px;
+}
+
+#menu > ul {
+    display: flex;
+    padding: 1rem;
+    flex-direction: row;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(5px);
+    border-radius: 30px;
+}
+
+#menu > ul > li {
+    list-style: none;
+    padding: 0 2rem;
+}
+
+#menu > ul > li > a,
+.linea {
+    font-weight: 600;
+    text-decoration-line: none;
+    color: var(--black-color);
+}
+
+/* Linea debajo de las palabras al hacer hover */
+.linea {
+    /* display: inline-block; */
+    position: relative;
+    cursor: pointer;
+    padding: 3px 0;
+}
+
+.linea::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--black-color);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.linea:hover::after {
+    width: 100%;
+}
+
+.entradas-btn {
+    background: var(--ccme-color);
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.entradas-btn:hover {
+    transform: translateY(-2px);
+    background: var(--black-color);
+}
+
+/* CONTENIDO HEADER */
+.header-img {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header-img .img-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
