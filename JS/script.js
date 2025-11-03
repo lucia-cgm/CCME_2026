@@ -2,12 +2,12 @@
 // Abre el menu
 function openMenu() {
   console.log("Función openMenu");
-  document.getElementById("menu").firstElementChild.lastElementChild.style.left ="0";
+  document.getElementById("menu-hamburguesa").firstElementChild.lastElementChild.style.left ="0";
 }
 // CERRAR menu
 function closeMenu() {
   console.log("Función closeMenu");
-  document.getElementById("menu").firstElementChild.lastElementChild.style.left ="-100%";
+  document.getElementById("menu-hamburguesa").firstElementChild.lastElementChild.style.left ="-100%";
 }
 
 
