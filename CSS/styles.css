@@ -853,15 +853,11 @@ footer > div:last-child > a:hover {
         padding: 0 1.5rem;
     }
 
-    /* Iconos ocultos */
-    .menu-icon {
-        display: none;
-    }
-
+    .menu-icon, 
     .close-icon {
         display: none;
     }
-    
+
     
     /* CONTENIDO HEADER */
     .content h2 span {
@@ -898,14 +894,13 @@ footer > div:last-child > a:hover {
     /* SECCION EXPERIENCIAS */
     #experiencias {
         height: auto;
-        min-height: 100vh;
+        min-height: 90vh;
         padding: 4rem 0;
     }
     
     #experiencias h1 {
         padding: 4rem 10% 2rem 10%;
         font-size: 1.8em;
-        -webkit-text-stroke: 6px var(--white-color);
     }
     
     #experiencias > div > figure {
@@ -921,18 +916,23 @@ footer > div:last-child > a:hover {
     /* VENTANA MODAL */
     #modal .m-content {
         flex-direction: column;
-        gap: 40px;
+        gap: 24px;
         padding: 30px;
         width: 90%;
     }
     
     #modal .m-content .m-img img {
-        width: 16rem;
+        width: 46rem;
         height: 20rem;
     }
     
     .m-info h3 {
         -webkit-text-stroke: 8px var(--ccme-color);
+    }
+
+    .buttons {
+        margin-top: 35px;
+        gap: 2rem;
     }
     
     /* CANAL YOUTUBE */
@@ -950,7 +950,7 @@ footer > div:last-child > a:hover {
         height: auto;
         min-height: 100vh;
         padding: 2rem 5%;
-        margin-top: 4rem;
+        margin-top: 6rem;
     }
     
     #presentadores .info-presentadores {
@@ -960,10 +960,20 @@ footer > div:last-child > a:hover {
     }
     
     #presentadores > .info-presentadores > figure > img {
-        width: 350px;
-        height: 280px;
+        width: 400px;
+        height: 320px;
     }
     
+    #presentadores > .info-presentadores > div {
+        flex-direction: row;
+    }
+
+    #presentadores > .info-presentadores > div > div {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
     #presentadores > .info-presentadores > div > * > img {
         width: 150px;
         height: 150px;
@@ -1024,10 +1034,14 @@ footer > div:last-child > a:hover {
         grid-template-columns: 1fr;
         justify-items: center;
     }
+
+    footer > div:last-child {
+        margin-bottom: 30px
+    }
 }
 
 /* Móvil */
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 767px) {
     
     h1 {
         font-size: 2em;
@@ -1089,7 +1103,6 @@ footer > div:last-child > a:hover {
     }
 
 
-    /* MENÚ ABIERTO */
     #menu.menu-open {
         left: 0;
     }
@@ -1136,7 +1149,6 @@ footer > div:last-child > a:hover {
         transform: scale(1.1);
     }
 
-    /* Bloquear scroll cuando el menú está abierto */
     body.menu-open {
         overflow: hidden;
     }

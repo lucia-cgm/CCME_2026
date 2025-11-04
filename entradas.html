@@ -73,7 +73,7 @@
         </header>
 
         <!-- TIPO DE ENTRADAS -->
-        <section>
+        <section id="entradas">
             <div>
                 <img src="MEDIA/img/experiencias/pulseras_abono_cashless.webp" alt="Abobo dos días">
                 <h3>Abono 70€ días 11 y 12 de septiembre</h3>
@@ -89,50 +89,84 @@
 
         <!-- CUESTIONARIO ENTRADAS -->
          <section id="compra-entradas">
-            <h2>¡NO TE QUEDES SIN LA TUYA!</h2>
+            <h1>¡NO TE QUEDES SIN LA TUYA!</h1>
             <form onsubmit="return comprar()">
-                <label for="nombre">Nombre</label>
+                <label for="nombre"></label>
                 <input type="text" id="nombre" placeholder="Nombre" required>
-                <label for="nombre">Apellidos</label>
+                <label for="nombre"></label>
                 <input type="text" id="apellidos" placeholder="Apellidos" required>
-                <label for="correo">Correo electrónico</label>
+                <label for="correo"></label>
                 <input type="email" id="correo" placeholder="E-mail" required>
-                <label for="actividad">Tipo de entrada</label>
+                <label for="actividad"></label>
                <!-- DESPLEGABLE dentro de una opción -->
                 <select id="actividad" onchange="costeTotal()" required>
                     <option value="a1">Abono días - 11 y 12 de septiembre</option>
                     <option value="a2">Entrada única - días 11 o 12 de septiembre</option>
                 </select>
-                <label for="numero">Número de entradas</label>
-                <input type="number" id="numero" min="1" max="6" placeholder="Número de entradas" onchange="costeTotal()" required>
-                <p>Coste de las entradas: <span id="coste"></span></p>
-                <input type="submit" value="Comprar entradas">
+                <label for="numero"></label>
+                <input type="number" id="numero" min="1" max="8" placeholder="Número de entradas" onchange="costeTotal()" required>
+                <div>
+                    <h1><span id="coste"></span></h1>
+                    <input type="submit" value="Comprar entradas  →">
+                </div>
             </form>
         </section>
 
-        <!-- CAMBIAR  -->
-        <div id="modal-imagen">
-            <figure>
-                <img src="" alt="">
-                <figcaption></figcaption>
-            </figure>
-            <i class="fa-solid fa-xmark" onclick="cerrarModal()"></i>
-        </div>
+        <!-- VENTANA MODAL - COMPRA  -->
         <div id="modal-entradas">
             <div>
-                <h2>La compra se ha realizado correctamente</h2>
-                <p>Actividad seleccionada:</p>
+                <h2>¡YA ESTAS LIST@ PARA VIVIR LA MEJOR EXPERIENCIA DE TU VIDA!</h2>
                 <ul>
-                    <!-- Se tienen que poner id distintos a los del formulario porque no se pueden repetir los id dentro del mismo HTML -->
                     <li>Nombre: <strong id="n"></strong></li>
+                    <li>Apellidos: <strong id="ap"></strong></li>
                     <li>Correo electrónico: <strong id="c"></strong></li>
-                    <li>Actividad: <strong id="a"></strong></li>
+                    <li>Entrada adquirida: <strong id="a"></strong></li>
                     <li>Número de entradas: <strong id="nu"></strong></li>
-                    <li>Coste total: <strong id="ct"></strong></li>
+                    <li>Precio total: <strong id="ct"></strong></li>
                 </ul>
                 <button onclick="cerrarVentana()">Aceptar</button>
             </div>
         </div>
+
+
+        <!-- FOOTER -->
+        <footer>
+            <div>
+                <img src="MEDIA/img/patrocinadores/cocacola_españa.webp">
+                <p>&copy; 2025 The Coca-Cola Company</p>
+            </div>
+            <div class="footer-container">
+                <div class="icons">
+                    <a href="https://www.youtube.com/@cocacolamusicexperience" title="youtube" target="_blank">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com/CocaColaEsp/" title="facebook" target="_blank">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/cocacola_esp/" title="instagram" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/CocaCola_es" title="x-twitter" target="_blank">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+                <div class="info">
+                    <div>
+                        <p>Preguntas frecuentes</p>
+                        <p>Mapa del sitio</p>
+                        <p>Contacte con nosotros</p>
+                    </div>
+                    <div>
+                        <p>Condiciones de uso</p>
+                        <p>Política de privacidad</p>
+                        <p>Política de cookies</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a href="https://www.coca-cola.com/es/es/legal/politica-de-cookies" title="cookies" target="_blank">Configuración de cookies</a>
+            </div>
+        </footer>
 
     </body>
 
