@@ -3,6 +3,7 @@
 function openMenu() {
   console.log("Función openMenu");
   document.getElementById("menu").style.transform ="translateX(0)";
+  document.getElementById("menu").style.backgroundColor ="white";
 }
 // CERRAR menu
 function closeMenu() {
@@ -122,24 +123,25 @@ function cerrarVentana() {
 
 
 
+
 // CONTADOR
-const targetDate = new Date('April 11, 2026 00:00:00').getTime();
+// const targetDate = new Date('April 11, 2026 00:00:00').getTime();
         
-function updateCountdown() {
-  const now = new Date().getTime();
-  const timeLeft = targetDate - now;
+// function updateCountdown() {
+//   const now = new Date().getTime();
+//   const timeLeft = targetDate - now;
             
-  // Contador de días restantes
-  const dias = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-  const horas = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutos = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+//   // Contador de días restantes
+//   const dias = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+//   const horas = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//   const minutos = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
             
-  // Actualizar los valores en pantalla
-  document.getElementById('dias').textContent = dias.toString().padStart(2, '0');
-  document.getElementById('horas').textContent = horas.toString().padStart(2, '0');
-  document.getElementById('minutos').textContent = minutos.toString().padStart(2, '0');
-}
+//   // Actualizar los valores en pantalla
+//   document.getElementById('dias').textContent = dias.toString().padStart(2, '0');
+//   document.getElementById('horas').textContent = horas.toString().padStart(2, '0');
+//   document.getElementById('minutos').textContent = minutos.toString().padStart(2, '0');
+// }
         
-// Actualizar el contador cada segundo
-updateCountdown();
-setInterval(updateCountdown, 1000);
+// // Actualizar el contador cada segundo
+// updateCountdown();
+// setInterval(updateCountdown, 1000);
