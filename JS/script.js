@@ -9,6 +9,7 @@ function openMenu() {
 function closeMenu() {
   console.log("Función closeMenu");
   document.getElementById("menu").style.transform ="translateX(calc(-100% + 4rem))";
+  document.getElementById("menu").style.backgroundColor ="transparent";
 } 
 
 
