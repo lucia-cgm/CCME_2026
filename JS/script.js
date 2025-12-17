@@ -116,7 +116,6 @@ function comprar() {
   
 }
 
-
 // CERRAR VENTANA MODAL
 function cerrarVentana() {
   document.getElementById("modal-entradas").style.display = "none";
