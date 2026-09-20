@@ -116,17 +116,18 @@ p {
 
 #menu > ul {
     display: flex;
-    padding: 1rem;
+    padding: 1.2rem 0.6rem;
+    padding-left: 2rem;
     flex-direction: row;
     justify-content: space-around;
+    gap: 2rem;
     background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(5px);
-    border-radius: 30px;
+    backdrop-filter: blur(8px);
+    border-radius: 32px;
 }
 
 #menu > ul > li {
     list-style: none;
-    padding: 0 2rem;
 }
 
 #menu > ul > li > a,
@@ -164,7 +165,7 @@ p {
     background: var(--ccme-color);
     color: white;
     text-decoration: none;
-    padding: 12px 25px;
+    padding: 12px 18px;
     border-radius: 25px;
     font-weight: 600;
     transition: all 0.3s ease;
